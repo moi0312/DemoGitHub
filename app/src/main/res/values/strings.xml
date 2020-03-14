@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DemoGitHub</string>
+    <string name="signIn">Sign In</string>
+    <string name="hintInputSearch">search repository by user</string>
+    <string name="btnSubmitText">Search</string>
+    <string name="drawerOpen">drawer open</string>
+    <string name="drawerClose">drawer close</string>
+    <string name="listEmpty">no data to display</string>
+
+    <string name="title_fragment_login">Login GitHub</string>
+    <string name="title_fragment_webview">Authorization</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <array name="tabTitles">
+        <item>Commits</item>
+        <item>Collaborators</item>
+    </array>
+
+</resources>

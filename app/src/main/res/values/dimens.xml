@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tabPadding">@dimen/margin</dimen>
+    <dimen name="actionbarTitlePadding">@dimen/margin</dimen>
+    <dimen name="userImageSize">32dp</dimen>
+    <dimen name="userImage_paddingRight">@dimen/marginXS</dimen>
+    <dimen name="commiterImageSize">24dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

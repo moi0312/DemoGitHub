@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtName"
+            style="@style/ItemRepositoryName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintEnd_toStartOf="@+id/txtLaguage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/txtName"
+            app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+        <TextView
+            android:id="@+id/txtLaguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtName" />
+
+        <TextView
+            android:id="@+id/txtLastUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            style="@style/ItemDateText"
+            app:layout_constraintEnd_toEndOf="@+id/txtLaguage"
+            app:layout_constraintTop_toBottomOf="@id/txtDesc" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:background="@color/divider"
+            app:layout_constraintTop_toBottomOf="@id/txtLastUpdate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

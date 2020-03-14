@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layoutSearch"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/inputSearch"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintInputSearch" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutSearch" />
+
+    <TextView
+        android:id="@+id/txtListEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/listEmpty"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutSearch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
