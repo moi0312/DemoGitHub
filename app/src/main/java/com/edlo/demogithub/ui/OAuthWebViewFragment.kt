@@ -1,6 +1,7 @@
 package com.edlo.demogithub.ui
 
 import android.content.Context
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -52,7 +53,7 @@ class OAuthWebViewFragment : Fragment() {
 
         arguments?.getString(ARG_STRING_LOGIN_NAME)?.let { loginName ->
             webClient.currentLoginUser = loginName
-            var scope = "repo"//"user"
+            var scope = "user" //"user", "repo"
             var url = "${ApiGitHub.POST_OAUTH_AUTHORIZE}?client_id=${BuildConfig.GIT_HUB_CLIENT_ID}&scope=${scope}&login=${loginName}"
             binding.webView.loadUrl(url)
         }
@@ -85,5 +86,21 @@ class GitHubLoginWebViewClient(val activity: FragmentActivity): WebViewClient() 
             }
         }
         return super.shouldOverrideUrlLoading(view, request)
+    }
+
+
+
+    override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+        super.onPageStarted(view, url, favicon)
+        if(activity is BaseActivity) {
+            (activity as BaseActivity).setLoadingViewStatus(true)
+        }
+    }
+
+    override fun onPageFinished(view: WebView?, url: String?) {
+        super.onPageFinished(view, url)
+        if(activity is BaseActivity) {
+            (activity as BaseActivity).setLoadingViewStatus(false)
+        }
     }
 }
